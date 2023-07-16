@@ -29,9 +29,9 @@ function RecentProjects() {
   }, []);
   return (
     <div>
-      <div className=" w-4/5 m-auto mt-6 border-2 flex justify-center items-center rounded-md border-white p-4">
+      <div className=" w-4/5 m-auto mt-6 border-2  rounded-md border-white p-4">
         {isloading ? (
-          <div className="" style={{ height: "80%" }}>
+          <div className="flex justify-center items-center" style={{ height: "80%" }}>
                     <TailSpin
           height="80"
           width="80"
