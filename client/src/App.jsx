@@ -5,11 +5,10 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Planit from "./components/Planit";
-import Ques from "./components/Ques";
 import PrivateRoute from "./components/PrivateRoute";
 import AskQues from './components/AskQues'
 // import Myquestions from './components/Allquestions'
-import AllQuestions from './components/AllQuestions'
+import Allquestions from './components/Allquestions'
 import MyProjects from './components/MyProjects'
 import Question from "./components/Question";
 function App() {
@@ -46,7 +45,7 @@ function App() {
           />
             {/* <Route path='/MyQuestions' element={<Myquestions/>}/> */}
             {/* <Route path='/projects' element={<MyProjects/>}/> */}
-            <Route path='/questions' element={<AllQuestions/>}/>
+            <Route path='/questions' element={<Allquestions/>}/>
             <Route path='/questions/:id' element={<Question/>}/>
         </Routes>
       </AuthProvider>
