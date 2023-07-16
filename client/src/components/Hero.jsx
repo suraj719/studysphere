@@ -21,7 +21,7 @@ function Hero() {
           </div>
           <div className="p-2">
             <img
-              src="../src/assets/management.png"
+              src="../management.png"
               alt="not found"
               className="w-full rounded-lg"
             />
@@ -32,7 +32,7 @@ function Hero() {
         <div className="w-4/5 m-auto flex justify-between items-center gap-6 ">
           <div className="p-2">
             <img
-              src="../src/assets/time.png"
+              src="../time.png"
               alt="not found"
               className="w-full rounded-lg"
             />
@@ -74,7 +74,7 @@ function Hero() {
           </div>
           <div className="p-2">
             <img
-              src="../src/assets/questions.png"
+              src="../questions.png"
               alt="not found"
               className="w-full rounded-lg"
             />
