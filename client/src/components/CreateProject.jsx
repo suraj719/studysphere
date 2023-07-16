@@ -61,7 +61,6 @@ function CreateProject() {
             }),
           }).then((res) => {
             navigate("/tasks")
-            console.log("created");
           });
         }
       });
@@ -78,7 +77,7 @@ function CreateProject() {
                 <h1 className="text-white text-2xl">
                   Hi {user.displayName} !!
                 </h1>
-                <p className="text-white">Have a doubt? Clear it right away!</p>
+                <p className="text-white">Add tasks to check your progress!!</p>
               </div>
               <form onSubmit={handleask}>
                 <div className="flex flex-col gap-6">

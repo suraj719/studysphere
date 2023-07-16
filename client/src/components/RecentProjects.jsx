@@ -3,6 +3,7 @@ import DropdownMenu from "./DropdownMenu";
 import { auth } from "../auth/Firebase";
 import Loader from "./Loader";
 import Task from "./Task";
+import { TailSpin } from "react-loader-spinner";
 function RecentProjects() {
   // const [user, setuser] = useState("");
   const [isloading, setIsloading] = useState("false");
@@ -11,6 +12,7 @@ function RecentProjects() {
   const fetchdata = () => {
     // console.log(user)
     setIsloading(true);
+    try{
     fetch(`${url}/api/v1/task/${localStorage.getItem("email")}`)
       .then((res) => res.json())
       .then((data) => {
@@ -18,17 +20,28 @@ function RecentProjects() {
         setAlltasks(data.task.tasks);
         setIsloading(false);
       });
+    }catch(err) {
+      console.log(err)
+    }
   };
   useEffect(() => {
     fetchdata();
   }, []);
   return (
     <div>
-      
-      <div className=" w-4/5 m-auto mt-6 border-2 rounded-md border-white p-4">
+      <div className=" w-4/5 m-auto mt-6 border-2 flex justify-center items-center rounded-md border-white p-4">
         {isloading ? (
-          <div style={{ height: "80%" }}>
-            <Loader />
+          <div className="" style={{ height: "80%" }}>
+                    <TailSpin
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
           </div>
         ) : (
           <>
